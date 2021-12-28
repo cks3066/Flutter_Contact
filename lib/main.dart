@@ -12,14 +12,20 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       home: Scaffold(
-        body: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: const [
-            Icon(Icons.star),
-            Icon(Icons.star),
-            Icon(Icons.star),
-          ],
+        appBar: AppBar( title: Text("앱임") ),
+        body: Text("안녕"),
+        bottomNavigationBar: BottomAppBar(
+          child: SizedBox(
+            height: 50,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: const [
+                Icon(Icons.phone),
+                Icon(Icons.message),
+                Icon(Icons.contact_page),
+              ],
+            ),
+          )
         ),
       )
     );
