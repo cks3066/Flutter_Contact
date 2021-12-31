@@ -12,19 +12,21 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar( title: Text("앱임") ),
-        body: Align(
-          alignment: Alignment.topCenter,
-          child: Container(
-            width: double.infinity, height: 50,
-            margin: EdgeInsets.all(20),
-            padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
-            child: Text("d"),
-            decoration: BoxDecoration(
-              color: Colors.blue,
-              border: Border.all(color: Colors.black)
-            ),
+        appBar: AppBar(
+          title: Text("앱임"),
+          leading: Icon(Icons.star),
+          actions: const [
+            Icon(Icons.ac_unit_outlined),
+            Icon(Icons.ac_unit_outlined),
+          ],),
+        body: SizedBox(
+          child: ElevatedButton(
+            child: Text("안녕하세요",
+              style: TextStyle(
+                  color: Color(0xffeeeeee),
+                  fontWeight: FontWeight.w600),
           ),
+            onPressed: (){}),
         ),
         bottomNavigationBar: BottomAppBar(
           child: SizedBox(
@@ -32,9 +34,9 @@ class MyApp extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: const [
-                Icon(Icons.phone),
-                Icon(Icons.message),
-                Icon(Icons.contact_page),
+                Icon(Icons.phone, color: Colors.blue,),
+                Icon(Icons.message, color: Colors.blue),
+                Icon(Icons.contact_page, color: Colors.blue),
               ],
             ),
           )
