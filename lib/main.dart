@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("앱임"),
+          title: Text("타이틀 변경"),
           leading: Icon(Icons.star),
           actions: const [
             Icon(Icons.ac_unit_outlined),
