@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
             style: TextStyle(
               color: Colors.black,
             ),),
-          actions: const [
+          actions: [
             Icon(Icons.search,
               color: Colors.black,
               size: 30.0,),
@@ -29,11 +29,34 @@ class MyApp extends StatelessWidget {
           ],
           backgroundColor: Colors.white,
         ),
-        body: Row(
-          children: [
-            Expanded(child: Container(color: Colors.blue)),
-            Container(width: 100, color: Colors.green)
-          ],
+        body: Container(
+          height: 150,
+          padding: EdgeInsets.all(10),
+          child: Row(
+            children: [
+              Image.asset("../assets/dog.jpg", width: 150,),
+              Flexible(child: Container(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("카메라 팝니다",
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),),
+                    Text("금호동 3가"),
+                    Text("7000원"),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Icon(Icons.favorite),
+                        Text("4"),
+                      ],
+                    ),
+                  ],
+                ),
+              ), flex: 1,)
+            ],
+          ),
         ),
         bottomNavigationBar: BottomAppBar(
           child: SizedBox(
