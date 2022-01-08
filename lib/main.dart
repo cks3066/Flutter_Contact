@@ -9,24 +9,31 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("타이틀 변경"),
-          leading: Icon(Icons.star),
+          title: Text("금호동 3가",
+            style: TextStyle(
+              color: Colors.black,
+            ),),
           actions: const [
-            Icon(Icons.ac_unit_outlined),
-            Icon(Icons.ac_unit_outlined),
-          ],),
-        body: SizedBox(
-          child: ElevatedButton(
-            child: Text("안녕하세요",
-              style: TextStyle(
-                  color: Color(0xffeeeeee),
-                  fontWeight: FontWeight.w600),
-          ),
-            onPressed: (){}),
+            Icon(Icons.search,
+              color: Colors.black,
+              size: 30.0,),
+            Icon(Icons.menu,
+              color: Colors.black,
+              size: 30.0,),
+            Icon(Icons.notifications_none_outlined,
+              color: Colors.black,
+              size: 30.0,),
+          ],
+          backgroundColor: Colors.white,
+        ),
+        body: Row(
+          children: [
+            Flexible(child: Container(color: Colors.blue), flex: 5,),
+            Flexible(child: Container(color: Colors.green), flex: 5,)
+          ],
         ),
         bottomNavigationBar: BottomAppBar(
           child: SizedBox(
