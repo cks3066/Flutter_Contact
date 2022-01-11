@@ -18,6 +18,12 @@ class MyApp extends StatelessWidget {
   }
 }
 
+// 평생 안바뀌는 것만 변수에 담아서 사용
+var a = SizedBox(
+  child: Text("안녕"),
+);
+
+// 재사용이 많은 것만 커스텀 위젯으로 만들어서 사용
 class ShopItem extends StatelessWidget {
   const ShopItem({Key? key}) : super(key: key);
 
